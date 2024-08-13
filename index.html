@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Maitree:wght@200;300;400;500;600;700&family=New+Amsterdam&display=swap" rel="stylesheet">
+    <title>Responsive</title>
+</head>
+<style>
+  *  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+ 
+}
+body{
+    background-image: linear-gradient(#540505, #640909, #ec2929);
+}
+video{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.content1 > div, .content2 > div > div {
+    padding: 10px
+}
+
+.header, .footer{
+    padding: 10px;
+}
+
+.wrapper{
+    min-height: 100vh;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 20px;
+    font-family: "Maitree", sans-serif;
+    color: #f2ebef;
+}
+
+.header, .footer, .content1, .content2>div>div{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #090709;
+    
+}
+
+.main-container{
+    flex: 6;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.content2{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.content2>div{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+@media screen and (max-width: 800px){
+
+    .main-container>div{
+        min-width: 400px;
+    }
+
+    .content1{
+        flex: 100%;
+    }
+
+    .header{
+        min-height: 90px;
+    }
+
+    .footer{
+        min-height: 110px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+
+    .content2>div{
+        flex-direction: column;
+    }
+
+    .content2>div>div{
+        min-height: 200px;
+    }
+
+}
+</style>
+<body>
+    <div class="wrapper">
+        <div class="header"><h2>“My Favorite Tootball Team.”</h2></div>
+        <div class="main-container">
+        <div class="content1">
+            <div><video autoplay controls muted src="./liverpool.mp4"></video></div>
+        </div>
+        <div class="content2">
+            <div class="subcontent1">
+                <div><video autoplay loop muted src="./salah.mp4"></video></div>
+                <div><video autoplay loop muted src="./van.mp4"></video></div>
+            </div>
+        <div class="subcontent2">
+            <div><video autoplay loop muted src="./gerrard.mp4"></video></div>
+            <div><video autoplay loop muted src="./torres.mp4"></video></div>
+        </div>
+        </div>        
+    </div>
+
+    <div class="footer"><h2>Thank You</h2></div>
+</div>
+</body>
+</html>
